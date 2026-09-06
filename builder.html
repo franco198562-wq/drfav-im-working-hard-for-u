@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aegis Builder</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app-shell">
+<header class="topbar">
+<div class="brand"><span class="brand-mark small">A</span><span>Aegis Builder</span></div>
+<div class="top-actions">
+<button id="previewButton" class="ghost">Preview</button>
+<button id="publishButton" class="primary">Save changes</button>
+<button id="logoutButton" class="ghost">Log out</button>
+</div>
+</header>
+<div class="builder-layout">
+<aside class="sidebar">
+<h2>Website</h2>
+<button class="side-button active" data-panel="pages">Pages</button>
+<button class="side-button" data-panel="sections">Add sections</button>
+<button class="side-button" data-panel="settings">Site settings</button>
+<div id="pagesPanel" class="panel">
+<div class="panel-heading"><strong>Pages</strong><button id="newPageButton" class="icon-button">+</button></div>
+<div id="pageList"></div>
+</div>
+<div id="sectionsPanel" class="panel hidden">
+<h3>Add a section</h3>
+<button class="add-section" data-type="hero">Hero section</button>
+<button class="add-section" data-type="text">Text section</button>
+<button class="add-section" data-type="image">Image section</button>
+<button class="add-section" data-type="cards">Card grid</button>
+<button class="add-section" data-type="button">Button section</button>
+</div>
+<div id="settingsPanel" class="panel hidden">
+<h3>Site settings</h3>
+<label>Site title<input id="siteTitle" type="text"></label>
+<label>Logo URL<input id="logoUrl" type="url" placeholder="https://..."></label>
+<label>Favicon URL<input id="faviconUrl" type="url" placeholder="https://..."></label>
+<label>Primary colour<input id="primaryColor" type="color"></label>
+<label>Background colour<input id="backgroundColor" type="color"></label>
+<label>Text colour<input id="textColor" type="color"></label>
+<button id="applySettings" class="primary full">Apply settings</button>
+</div>
+</aside>
+<main class="editor-area">
+<div class="editor-heading"><div><p class="eyebrow">Editing page</p><h1 id="currentPageTitle">Home</h1></div><button id="deletePageButton" class="danger ghost">Delete page</button></div>
+<div id="canvas" class="canvas"></div>
+</main>
+<aside class="inspector">
+<h2>Element editor</h2>
+<p class="muted">Select a section to edit its content.</p>
+<div id="inspectorContent" class="muted">Nothing selected.</div>
+</aside>
+</div>
+</div>
+<script src="builder.js"></script>
+</body>
+</html>
