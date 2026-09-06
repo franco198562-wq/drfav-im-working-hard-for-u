@@ -5,4 +5,4 @@ compatibility_date = "2026-09-06"
 [[d1_databases]]
 binding = "DB"
 database_name = "aegis-builder"
-database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+database_id = "61e09750-3e89-434b-af76-4c56e6863dd2"
